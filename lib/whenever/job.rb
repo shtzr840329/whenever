@@ -30,6 +30,7 @@ module Whenever
   protected
 
     def process_template(template, options)
+      p "---------------------------------#{template}-----------#{options}------------------------------------------------------"
       template.gsub(/:\w+/) do |key|
         before_and_after = [$`[-1..-1], $'[0..0]]
         option = options[key.sub(':', '').to_sym] || key
