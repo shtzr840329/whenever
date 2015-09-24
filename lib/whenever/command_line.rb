@@ -3,6 +3,7 @@ require 'fileutils'
 module Whenever
   class CommandLine
     def self.execute(options={})
+      puts "-----------------#{options}-----------------"
       new(options).run
     end
 
