@@ -5,6 +5,7 @@ module Whenever
     attr_reader :at, :roles
 
     def initialize(options = {})
+      p "--------------------------------------------#{options}------------------------------------------------------"
       @options = options
       @at                               = options.delete(:at)
       @template                         = options.delete(:template)
